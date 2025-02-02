@@ -1,13 +1,13 @@
 import {
-  Card,
   ConfirmationPage,
   ConfirmEmail,
   LoginForm,
   NavBar,
   SignUpForm,
+  Footer,
 } from "./Components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthenticationPage ,Home} from "./Pages";
+import { AuthenticationPage, HomePage } from "./Pages";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/">
-            <Route path="Home" element={<Home/>}/>
+            <Route path="Home" element={<HomePage/>}/>
             <Route path="Auth" element={<AuthenticationPage />}>
               <Route
                 path="Login"
@@ -45,6 +45,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }
